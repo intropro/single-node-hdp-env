@@ -1,6 +1,6 @@
 server:
     # build: .
-    image: single-node-hdp-env:2.2.8.0
+    image: intropro/single-node-hdp-env:2.2.8.0
     restart: always
     privileged: true
     hostname: amb-server.bigdata
