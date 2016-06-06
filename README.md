@@ -1,4 +1,4 @@
-# Single hdp node docker
+# Single node hdp docker with Ambari
 
 ## Info
 This docker is packaged single node hdp cluster with services autodeployment. Also it is possible to make automatic services kerberezation.
