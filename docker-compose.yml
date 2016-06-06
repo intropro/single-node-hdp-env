@@ -1,0 +1,22 @@
+server:
+    # build: .
+    image: single-node-hdp-env:2.2.8.0
+    restart: always
+    privileged: true
+    hostname: amb-server.bigdata
+    ports:
+        - "2222:22"     # ssh
+        - "8080:8080"   # Ambari
+        - "8000:8000"   # HUE
+        - "11000:11000" # Oozie
+        - "50070:50070" # HDFS REST Namenode
+        - "80:80"          # info page
+    # net: "host"
+    # To enable kerberos uncomment below
+    # extra_hosts:
+    #     - "kerberos:127.0.0.1"
+    environment:
+        - USE_LOCAL_REPOSITORIES=false
+        - KERBERIZED=false # you can use this in conjaction with preinstalled kerberos service, use link kerberos for external service o container
+        - DEPLOY_HDP_SERVICES=true
+        - HDP_CLUSTER_NAME=MyCluster1 # Provide cluster name

@@ -22,7 +22,7 @@ Change current directory to directory where docker-compose.yml located.
 
 make build            # build image from Dockerfile
 
-make pull             # download image from intropro docker registry
+make pull             # download image from docker registry
 
 make run              # run container from image that is specified in docker-compose.yml file
 
